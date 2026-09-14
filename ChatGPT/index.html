@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Café Central: café de especialidad, pastelería y comidas caseras en un ambiente cálido.">
+  <title>Café Central | Café, sabores y buenos momentos</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="site-header" id="inicio">
+    <nav class="navbar container" aria-label="Navegación principal">
+      <a class="brand" href="#inicio" aria-label="Café Central - inicio">
+        <span class="brand-mark">CC</span>
+        <span>Café Central</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#menu">Menú</a></li>
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+
+    <section class="hero container" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow">CAFÉ DE ESPECIALIDAD · HECHO CON CALMA</p>
+        <h1 id="hero-title">Un buen café cambia el ritmo del día.</h1>
+        <p class="hero-text">Un espacio para encontrarte con alguien, trabajar un rato o simplemente disfrutar algo rico. Café Central combina café recién preparado, cocina casera y una atmósfera que invita a quedarse.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#menu">Ver nuestro menú</a>
+          <a class="button button-ghost" href="#contacto">Encontranos</a>
+        </div>
+        <div class="hero-details">
+          <span>☕ Café recién molido</span>
+          <span>🥐 Pastelería artesanal</span>
+          <span>🌿 Ambiente tranquilo</span>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-image-wrap">
+          <img src="assets/cafe.svg" alt="Ilustración de una taza de café sobre una mesa">
+          <div class="floating-card">
+            <strong>Tu pausa favorita</strong>
+            <span>Todos los días, desde las 8:00</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </header>
+
+  <main>
+    <section class="section menu-section" id="menu" aria-labelledby="menu-title">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">PARA CADA MOMENTO</p>
+            <h2 id="menu-title">Nuestro menú</h2>
+          </div>
+          <p>Clásicos de siempre y algunos favoritos de la casa, preparados con ingredientes simples y mucho cariño.</p>
+        </div>
+
+        <div class="menu-filters" role="group" aria-label="Filtrar menú">
+          <button class="filter-button active" data-filter="todos">Todo</button>
+          <button class="filter-button" data-filter="cafes">Cafés</button>
+          <button class="filter-button" data-filter="bebidas">Bebidas</button>
+          <button class="filter-button" data-filter="comidas">Comidas</button>
+        </div>
+
+        <div class="menu-grid">
+          <article class="menu-card" data-category="cafes">
+            <div class="menu-icon">☕</div>
+            <div><h3>Espresso</h3><p>Corto, intenso y con una crema suave.</p><strong>$2.400</strong></div>
+          </article>
+          <article class="menu-card" data-category="cafes">
+            <div class="menu-icon">🥛</div>
+            <div><h3>Flat White</h3><p>Espresso doble con leche texturizada.</p><strong>$3.200</strong></div>
+          </article>
+          <article class="menu-card" data-category="cafes">
+            <div class="menu-icon">🍫</div>
+            <div><h3>Mocha Central</h3><p>Café, chocolate y leche cremosa.</p><strong>$3.500</strong></div>
+          </article>
+          <article class="menu-card" data-category="bebidas">
+            <div class="menu-icon">🧊</div>
+            <div><h3>Iced Latte</h3><p>Espresso, leche y hielo para una pausa fresca.</p><strong>$3.400</strong></div>
+          </article>
+          <article class="menu-card" data-category="bebidas">
+            <div class="menu-icon">🍊</div>
+            <div><h3>Limonada casera</h3><p>Limón recién exprimido, menta y hielo.</p><strong>$2.800</strong></div>
+          </article>
+          <article class="menu-card" data-category="bebidas">
+            <div class="menu-icon">🍵</div>
+            <div><h3>Té en hebras</h3><p>Selección de blends para tomar con calma.</p><strong>$2.500</strong></div>
+          </article>
+          <article class="menu-card" data-category="comidas">
+            <div class="menu-icon">🥐</div>
+            <div><h3>Croissant de manteca</h3><p>Hojaldre dorado, crujiente y recién horneado.</p><strong>$2.100</strong></div>
+          </article>
+          <article class="menu-card" data-category="comidas">
+            <div class="menu-icon">🥪</div>
+            <div><h3>Tostado Central</h3><p>Pan de campo, jamón, queso y mostaza suave.</p><strong>$4.900</strong></div>
+          </article>
+          <article class="menu-card" data-category="comidas">
+            <div class="menu-icon">🍰</div>
+            <div><h3>Cheesecake</h3><p>Suave y cremoso, con frutos rojos de estación.</p><strong>$4.200</strong></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section about-section" id="nosotros" aria-labelledby="about-title">
+      <div class="container about-grid">
+        <div class="about-visual">
+          <div class="coffee-art" aria-hidden="true">
+            <span class="steam steam-1"></span><span class="steam steam-2"></span><span class="steam steam-3"></span>
+            <div class="cup"></div><div class="saucer"></div>
+          </div>
+        </div>
+        <div class="about-copy">
+          <p class="eyebrow">DESDE 2018</p>
+          <h2 id="about-title">Un rincón para bajar un cambio.</h2>
+          <p>Café Central nació con una idea sencilla: crear un lugar donde el café sea una excusa para compartir. Elegimos granos de pequeños productores, trabajamos con pastelería artesanal y cocinamos platos que nos recuerdan a casa.</p>
+          <p>Nos gusta conocer a quienes nos visitan, aprender sus pedidos de memoria y hacer que una pausa de veinte minutos se sienta como mucho más.</p>
+          <div class="about-stats">
+            <div><strong>7+</strong><span>años de café</span></div>
+            <div><strong>18</strong><span>opciones en carta</span></div>
+            <div><strong>100%</strong><span>ganas de recibirte</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact-section" id="contacto" aria-labelledby="contact-title">
+      <div class="container contact-grid">
+        <div class="contact-info">
+          <p class="eyebrow">¿NOS VISITÁS?</p>
+          <h2 id="contact-title">Hablemos.</h2>
+          <p>Si querés reservar una mesa, consultar la carta o simplemente saludarnos, escribinos. Te respondemos lo antes posible.</p>
+          <div class="contact-list">
+            <div><span class="contact-symbol">⌖</span><div><strong>Dirección</strong><span>Av. Central 1234, La Plata</span></div></div>
+            <div><span class="contact-symbol">☎</span><div><strong>Teléfono</strong><span>+54 221 555-0142</span></div></div>
+            <div><span class="contact-symbol">✉</span><div><strong>Email</strong><span>hola@cafecentral.com</span></div></div>
+            <div><span class="contact-symbol">◷</span><div><strong>Horarios</strong><span>Lun–Vie 08:00–20:00 · Sáb–Dom 09:00–21:00</span></div></div>
+          </div>
+        </div>
+
+        <form class="contact-form" id="contact-form" novalidate>
+          <div class="form-row">
+            <label for="nombre">Nombre</label>
+            <input id="nombre" name="nombre" type="text" placeholder="Tu nombre" required>
+          </div>
+          <div class="form-row">
+            <label for="email">Correo electrónico</label>
+            <input id="email" name="email" type="email" placeholder="tu@email.com" required>
+          </div>
+          <div class="form-row">
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" rows="5" placeholder="¿En qué podemos ayudarte?" required></textarea>
+          </div>
+          <button class="button button-primary submit-button" type="submit">Enviar mensaje</button>
+          <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <a class="brand footer-brand" href="#inicio"><span class="brand-mark">CC</span><span>Café Central</span></a>
+      <p>© 2026 Café Central. Café, comida y buenos momentos.</p>
+      <a href="#inicio" class="back-top" aria-label="Volver al inicio">↑</a>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 620">
+  <defs>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-opacity=".18"/>
+    </filter>
+  </defs>
+  <circle cx="310" cy="310" r="265" fill="#efe1cd"/>
+  <circle cx="310" cy="310" r="215" fill="#dfc9aa"/>
+  <ellipse cx="310" cy="450" rx="210" ry="35" fill="#8c5a42" opacity=".22"/>
+  <g filter="url(#shadow)">
+    <ellipse cx="310" cy="418" rx="185" ry="55" fill="#f9f1e6"/>
+    <path d="M178 280h265v120c0 63-45 105-132 105s-133-42-133-105z" fill="#a96346"/>
+    <ellipse cx="310" cy="280" rx="132" ry="45" fill="#f8eee0"/>
+    <ellipse cx="310" cy="280" rx="116" ry="33" fill="#4a2c20"/>
+    <path d="M442 315c92-10 98 100 18 119-27 7-47-3-59-19 25 2 48-10 48-38 0-29-24-46-47-44z" fill="#9a5e43"/>
+    <path d="M255 180c-25-43 28-51 4-95M318 175c-22-44 32-56 8-101M379 185c-18-38 29-51 8-88" fill="none" stroke="#8c6c5c" stroke-width="12" stroke-linecap="round" opacity=".5"/>
+  </g>
+  <text x="310" y="540" text-anchor="middle" font-family="Georgia,serif" font-size="26" fill="#4a2c20">CAFÉ CENTRAL</text>
+</svg>
