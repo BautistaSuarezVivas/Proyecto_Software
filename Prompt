@@ -1,0 +1,239 @@
+Quiero que desarrolles un sitio web estático completo para publicar cursos dictados por una institución.
+
+IMPORTANTE:
+- El sitio debe cumplir estrictamente con todos los requisitos indicados a continuación.
+- SOLO se permite utilizar HTML5 y CSS3.
+- NO utilizar JavaScript.
+- NO utilizar frameworks ni librerías externas como Bootstrap, Tailwind, React, Vue, etc.
+- El sitio debe ser completamente estático.
+- El código debe estar organizado en archivos separados.
+- Todas las reglas de estilo deben estar en un archivo CSS externo llamado exactamente "estilosIA.css".
+- El resultado debe estar preparado para ser subido directamente a un repositorio Git.
+
+### Estructura requerida
+
+Generá como mínimo la siguiente estructura:
+
+/
+├── index.html
+├── contacto.html
+├── mantenimiento.html
+├── estilosIA.css
+└── programas/
+    ├── ingles-principiante.pdf
+    ├── ingles-avanzado.pdf
+    ├── ingles-conversacion.pdf
+    ├── frances-principiante.pdf
+    ├── frances-avanzado.pdf
+    └── frances-conversacion.pdf
+
+Los archivos PDF pueden ser archivos de ejemplo o placeholders claramente identificados si no es posible generarlos.
+
+### 1. Barra de navegación
+
+El sitio debe tener una barra de navegación clara, semántica y responsive.
+
+Debe contener enlaces a:
+
+- Inicio
+- Información de contacto
+- Información sobre quién mantiene el sitio
+- Catálogo de cursos
+
+La navegación debe funcionar mediante enlaces HTML normales.
+
+### 2. Catálogo de cursos
+
+Los cursos deben estar divididos en exactamente dos categorías:
+
+- Inglés
+- Francés
+
+Debe haber al menos 3 cursos de cada categoría.
+
+Por ejemplo:
+
+INGLÉS:
+- Inglés Principiante
+- Inglés Avanzado
+- Inglés Conversación
+
+FRANCÉS:
+- Francés Principiante
+- Francés Avanzado
+- Francés Conversación
+
+Podés utilizar otros nombres similares si lo considerás apropiado.
+
+### 3. Selección de categoría
+
+El usuario debe poder seleccionar una categoría mediante HTML, utilizando por ejemplo:
+
+- botones de radio, o
+- una lista de opciones desplegable.
+
+Al seleccionar una categoría, deben mostrarse los cursos correspondientes a dicha categoría.
+
+IMPORTANTE:
+Como el sitio NO puede utilizar JavaScript, la interacción debe resolverse exclusivamente mediante HTML y CSS. Por ejemplo, podés utilizar radio buttons junto con el selector CSS :checked para mostrar u ocultar las categorías.
+
+La interacción debe mantenerse completamente estática.
+
+### 4. Información de cada curso
+
+Por cada curso debe mostrarse una tarjeta, bloque o elemento visual similar al ejemplo de la consigna.
+
+Cada curso debe contener como mínimo:
+
+- Nombre del curso.
+- Un breve texto descriptivo.
+- Un enlace para descargar o consultar el programa del curso.
+
+El enlace debe apuntar a un archivo PDF ubicado dentro del directorio:
+
+"programas/"
+
+Cada curso debe tener su correspondiente archivo PDF.
+
+Las tarjetas de los cursos deben tener un diseño visual claro y consistente.
+
+El diseño debe especificar mediante CSS:
+
+- tipo de borde;
+- grosor del borde;
+- color del borde;
+- relleno interno (padding);
+- separación entre tarjetas.
+
+Podés elegir libremente los colores, tipografías y estilos visuales.
+
+### 5. Diseño responsive
+
+El sitio debe ser responsive y adaptarse correctamente a:
+
+- computadoras de escritorio;
+- tablets;
+- teléfonos celulares.
+
+Utilizá CSS responsive, incluyendo media queries cuando sea necesario.
+
+La navegación, las tarjetas y el contenido deben reorganizarse correctamente en pantallas pequeñas.
+
+No debe aparecer scroll horizontal innecesario.
+
+### 6. Página de contacto
+
+Crear una sección o página independiente de contacto.
+
+Debe contener un formulario HTML simple con campos apropiados, por ejemplo:
+
+- Nombre
+- Apellido
+- Correo electrónico
+- Asunto
+- Mensaje
+- Botón para enviar
+
+Utilizar HTML semántico y etiquetas <label> correctamente asociadas a cada campo.
+
+No utilizar JavaScript para validar o procesar el formulario.
+
+El formulario puede utilizar un action ficticio o apropiado para un sitio estático.
+
+### 7. Página "Quién mantiene el sitio"
+
+Crear una sección o página donde se indique quién mantiene el sitio.
+
+Incluir información ficticia pero realista, por ejemplo:
+
+- Nombre del responsable.
+- Rol.
+- Breve descripción.
+- Medio de contacto.
+
+No utilizar información personal real.
+
+### 8. HTML semántico y accesibilidad
+
+El sitio debe utilizar HTML5 semántico siempre que sea posible.
+
+Utilizar correctamente elementos como:
+
+- header
+- nav
+- main
+- section
+- article
+- footer
+
+Además:
+
+- Cada página debe tener un <title> descriptivo.
+- Utilizar una jerarquía correcta de encabezados (h1, h2, h3).
+- Las imágenes, si se utilizan, deben tener atributo alt.
+- Los formularios deben tener labels correctamente asociados.
+- Los enlaces deben tener textos descriptivos.
+- Mantener suficiente contraste entre texto y fondo.
+- Utilizar elementos HTML apropiados según su función.
+- Evitar elementos innecesarios o HTML obsoleto.
+- El sitio debe ser navegable mediante teclado.
+- No depender exclusivamente del color para transmitir información.
+
+### 9. CSS
+
+Todo el CSS debe estar exclusivamente en:
+
+"estilosIA.css"
+
+No utilizar:
+
+- estilos inline;
+- etiquetas <style>;
+- frameworks CSS externos.
+
+El CSS debe estar organizado y comentado cuando sea necesario.
+
+Utilizar nombres de clases claros y descriptivos.
+
+### 10. Compatibilidad y validación
+
+Generá código HTML5 y CSS3 válido, evitando errores de sintaxis.
+
+El sitio debe estar preparado para ser analizado posteriormente con:
+
+- un validador de HTML;
+- un validador de CSS;
+- una herramienta de accesibilidad.
+
+Priorizá buenas prácticas de accesibilidad y estándares web.
+
+### 11. Diseño visual
+
+El diseño debe ser moderno, limpio y profesional, pero sencillo.
+
+Podés elegir libremente:
+
+- colores;
+- tipografías;
+- bordes;
+- tamaños;
+- espaciados;
+- distribución;
+- estilos de navegación.
+
+El diseño debe mantener coherencia visual entre todas las páginas.
+
+### 12. Entrega
+
+Quiero que me entregues:
+
+1. La estructura completa de carpetas y archivos.
+2. El contenido completo de cada archivo HTML.
+3. El contenido completo de "estilosIA.css".
+4. Los nombres de los archivos PDF que deberían ubicarse dentro de "programas/".
+5. Una breve explicación de cómo funciona la selección de categorías utilizando únicamente HTML y CSS.
+6. Una breve explicación de cómo probar el sitio localmente.
+7. Una lista de comprobación indicando cómo cada requisito de la consigna fue cumplido.
+
+NO agregues JavaScript bajo ninguna circunstancia.
+NO utilices frameworks ni librerías externas.
