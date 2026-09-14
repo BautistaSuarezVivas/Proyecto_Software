@@ -1,0 +1,521 @@
+/* =========================================================
+   Instituto Horizonte - estilosIA.css
+   Única hoja de estilos del sitio.
+   HTML5 + CSS3, sin JavaScript ni frameworks externos.
+   ========================================================= */
+
+/* ---------- Variables y configuración general ---------- */
+:root {
+    --color-primario: #173b57;
+    --color-primario-oscuro: #0d293e;
+    --color-acento: #c75b12;
+    --color-acento-oscuro: #934109;
+    --color-fondo: #f4f6f8;
+    --color-superficie: #ffffff;
+    --color-texto: #17212b;
+    --color-secundario: #52606d;
+    --color-borde: #b8c3cf;
+    --color-foco: #006b5f;
+    --ancho-maximo: 1120px;
+    --radio: 12px;
+    --sombra: 0 8px 24px rgba(15, 23, 42, 0.09);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    min-width: 320px;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+}
+
+a {
+    color: var(--color-primario);
+}
+
+a:hover {
+    color: var(--color-acento-oscuro);
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid var(--color-foco);
+    outline-offset: 3px;
+}
+
+.contenedor {
+    width: min(calc(100% - 2rem), var(--ancho-maximo));
+    margin-inline: auto;
+}
+
+/* ---------- Encabezado y navegación ---------- */
+.encabezado-sitio {
+    background-color: var(--color-primario);
+    color: #ffffff;
+    border-bottom: 4px solid var(--color-acento);
+}
+
+.encabezado-contenido {
+    min-height: 76px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+}
+
+.marca {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.35rem;
+    font-weight: 800;
+    white-space: nowrap;
+}
+
+.marca:hover {
+    color: #ffffff;
+}
+
+.navegacion-principal ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 0.35rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navegacion-principal a {
+    display: block;
+    padding: 0.62rem 0.82rem;
+    border: 2px solid transparent;
+    border-radius: 7px;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.94rem;
+}
+
+.navegacion-principal a:hover,
+.navegacion-principal a.enlace-actual {
+    border-color: rgba(255, 255, 255, 0.65);
+    background-color: rgba(255, 255, 255, 0.12);
+    color: #ffffff;
+}
+
+/* ---------- Portada y cabeceras internas ---------- */
+.presentacion,
+.cabecera-pagina {
+    background: linear-gradient(135deg, var(--color-primario-oscuro), var(--color-primario));
+    color: #ffffff;
+}
+
+.presentacion {
+    padding: 5rem 0;
+}
+
+.cabecera-pagina {
+    padding: 3.5rem 0;
+}
+
+.presentacion h1,
+.cabecera-pagina h1 {
+    max-width: 780px;
+    margin: 0.25rem 0 1rem;
+    line-height: 1.12;
+    font-size: clamp(2rem, 5vw, 3.35rem);
+}
+
+.texto-presentacion,
+.cabecera-pagina p:last-child {
+    max-width: 720px;
+    font-size: 1.08rem;
+    color: #e8eef4;
+}
+
+.sobretitulo {
+    margin: 0 0 0.35rem;
+    color: var(--color-acento-oscuro);
+    font-size: 0.82rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.presentacion .sobretitulo,
+.cabecera-pagina .sobretitulo {
+    color: #ffc083;
+}
+
+.boton {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.76rem 1.2rem;
+    border: 2px solid var(--color-acento);
+    border-radius: 8px;
+    background-color: var(--color-acento);
+    color: #ffffff;
+    font: inherit;
+    font-weight: 800;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.boton:hover {
+    border-color: var(--color-acento-oscuro);
+    background-color: var(--color-acento-oscuro);
+    color: #ffffff;
+}
+
+/* ---------- Catálogo ---------- */
+.seccion-catalogo {
+    padding-top: 4rem;
+    padding-bottom: 4.5rem;
+}
+
+.encabezado-seccion {
+    margin-bottom: 1.5rem;
+}
+
+.encabezado-seccion h2 {
+    margin: 0.15rem 0 0.5rem;
+    font-size: clamp(1.8rem, 4vw, 2.45rem);
+    line-height: 1.2;
+}
+
+.encabezado-seccion p:last-child {
+    color: var(--color-secundario);
+}
+
+.selector-categoria {
+    padding: 1.35rem;
+    border: 2px solid var(--color-borde);
+    border-radius: var(--radio);
+    background-color: var(--color-superficie);
+}
+
+.selector-categoria > h3 {
+    margin-top: 0;
+    margin-bottom: 0.8rem;
+    font-size: 1rem;
+}
+
+.opciones-categoria {
+    display: grid;
+    grid-template-columns: auto auto 1fr;
+    align-items: center;
+    gap: 0.65rem 0.55rem;
+}
+
+.opciones-categoria input[type="radio"] {
+    width: 1.15rem;
+    height: 1.15rem;
+    margin: 0;
+    accent-color: var(--color-primario);
+}
+
+.opciones-categoria label {
+    margin-right: 1rem;
+    cursor: pointer;
+    font-weight: 800;
+}
+
+.grupos-cursos {
+    grid-column: 1 / -1;
+    margin-top: 1.4rem;
+}
+
+.grupo-cursos {
+    display: none;
+}
+
+#categoria-ingles:checked ~ .grupos-cursos .grupo-ingles {
+    display: block;
+}
+
+#categoria-frances:checked ~ .grupos-cursos .grupo-frances {
+    display: block;
+}
+
+.titulo-grupo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.titulo-grupo h3 {
+    margin: 0;
+    font-size: 1.65rem;
+}
+
+.titulo-grupo span {
+    padding: 0.28rem 0.7rem;
+    border: 1px solid var(--color-borde);
+    border-radius: 999px;
+    background-color: #eef2f6;
+    color: var(--color-primario-oscuro);
+    font-size: 0.85rem;
+    font-weight: 800;
+}
+
+.grilla-cursos {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.25rem;
+}
+
+.tarjeta-curso {
+    display: flex;
+    flex-direction: column;
+    min-height: 315px;
+    padding: 1.5rem;
+    border-width: 2px;
+    border-style: solid;
+    border-color: var(--color-borde);
+    border-radius: var(--radio);
+    background-color: var(--color-superficie);
+    box-shadow: var(--sombra);
+}
+
+.tarjeta-curso:hover {
+    border-color: var(--color-primario);
+}
+
+.nivel-curso {
+    align-self: flex-start;
+    margin: 0 0 0.75rem;
+    padding: 0.2rem 0.5rem;
+    border: 1px solid #d4a77b;
+    border-radius: 5px;
+    background-color: #fff4e8;
+    color: #7a3306;
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.035em;
+    text-transform: uppercase;
+}
+
+.tarjeta-curso h3 {
+    margin: 0 0 0.7rem;
+    font-size: 1.35rem;
+    line-height: 1.25;
+}
+
+.tarjeta-curso > p:not(.nivel-curso) {
+    margin: 0 0 1.5rem;
+    color: var(--color-secundario);
+}
+
+.enlace-programa {
+    margin-top: auto;
+    font-weight: 800;
+}
+
+/* ---------- Página de contacto ---------- */
+.seccion-contenido {
+    padding-top: 3.5rem;
+    padding-bottom: 4.5rem;
+}
+
+.contenedor-formulario {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 2rem;
+    border: 2px solid var(--color-borde);
+    border-radius: var(--radio);
+    background-color: var(--color-superficie);
+    box-shadow: var(--sombra);
+}
+
+.fila-formulario {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+.campo-formulario {
+    margin-bottom: 1.15rem;
+}
+
+.campo-formulario label {
+    display: block;
+    margin-bottom: 0.4rem;
+    font-weight: 800;
+}
+
+.campo-formulario input,
+.campo-formulario textarea {
+    display: block;
+    width: 100%;
+    padding: 0.76rem 0.85rem;
+    border: 2px solid var(--color-borde);
+    border-radius: 7px;
+    background-color: #ffffff;
+    color: var(--color-texto);
+    font: inherit;
+}
+
+.campo-formulario textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+/* ---------- Página de mantenimiento ---------- */
+.tarjeta-responsable {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 1.5rem;
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 2rem;
+    border: 2px solid var(--color-borde);
+    border-radius: var(--radio);
+    background-color: var(--color-superficie);
+    box-shadow: var(--sombra);
+}
+
+.insignia-responsable {
+    display: grid;
+    place-items: center;
+    width: 84px;
+    height: 84px;
+    border-radius: 50%;
+    background-color: var(--color-primario);
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: 900;
+}
+
+.tarjeta-responsable h2 {
+    margin: 0.1rem 0;
+}
+
+.rol-responsable {
+    margin-top: 0;
+    color: #7a3306;
+    font-weight: 800;
+}
+
+/* ---------- Pie de página ---------- */
+.pie-sitio {
+    background-color: #0f2536;
+    color: #e8eef4;
+}
+
+.pie-contenido {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.5rem 0;
+}
+
+.pie-contenido p {
+    margin: 0;
+}
+
+.pie-contenido nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.pie-contenido a {
+    color: #e8eef4;
+}
+
+.pie-contenido a:hover {
+    color: #ffffff;
+}
+
+/* ---------- Diseño responsive ---------- */
+@media (max-width: 900px) {
+    .encabezado-contenido {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 1rem 0;
+    }
+
+    .navegacion-principal ul {
+        justify-content: flex-start;
+    }
+
+    .grilla-cursos {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 640px) {
+    .contenedor {
+        width: min(calc(100% - 1.25rem), var(--ancho-maximo));
+    }
+
+    .presentacion {
+        padding: 3.5rem 0;
+    }
+
+    .cabecera-pagina {
+        padding: 2.75rem 0;
+    }
+
+    .navegacion-principal,
+    .navegacion-principal ul {
+        width: 100%;
+    }
+
+    .navegacion-principal ul {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .opciones-categoria {
+        grid-template-columns: auto 1fr;
+    }
+
+    .grupos-cursos {
+        grid-column: 1 / -1;
+    }
+
+    .grilla-cursos,
+    .fila-formulario,
+    .tarjeta-responsable {
+        grid-template-columns: 1fr;
+    }
+
+    .titulo-grupo {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .tarjeta-curso {
+        min-height: auto;
+    }
+
+    .contenedor-formulario,
+    .tarjeta-responsable {
+        padding: 1.25rem;
+    }
+
+    .insignia-responsable {
+        width: 68px;
+        height: 68px;
+    }
+
+    .pie-contenido {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}

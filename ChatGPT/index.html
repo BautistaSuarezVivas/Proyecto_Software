@@ -1,180 +1,131 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Café Central: café de especialidad, pastelería y comidas caseras en un ambiente cálido.">
-  <title>Café Central | Café, sabores y buenos momentos</title>
-  <link rel="stylesheet" href="css/styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Catálogo de cursos de Inglés y Francés del Instituto Horizonte.">
+    <title>Inicio y catálogo de cursos | Instituto Horizonte</title>
+    <link rel="stylesheet" href="estilosIA.css">
 </head>
 <body>
-  <header class="site-header" id="inicio">
-    <nav class="navbar container" aria-label="Navegación principal">
-      <a class="brand" href="#inicio" aria-label="Café Central - inicio">
-        <span class="brand-mark">CC</span>
-        <span>Café Central</span>
-      </a>
-      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Abrir menú">
-        <span></span><span></span><span></span>
-      </button>
-      <ul class="nav-menu" id="nav-menu">
-        <li><a href="#inicio">Inicio</a></li>
-        <li><a href="#menu">Menú</a></li>
-        <li><a href="#nosotros">Nosotros</a></li>
-        <li><a href="#contacto">Contacto</a></li>
-      </ul>
-    </nav>
-
-    <section class="hero container" aria-labelledby="hero-title">
-      <div class="hero-copy">
-        <p class="eyebrow">CAFÉ DE ESPECIALIDAD · HECHO CON CALMA</p>
-        <h1 id="hero-title">Un buen café cambia el ritmo del día.</h1>
-        <p class="hero-text">Un espacio para encontrarte con alguien, trabajar un rato o simplemente disfrutar algo rico. Café Central combina café recién preparado, cocina casera y una atmósfera que invita a quedarse.</p>
-        <div class="hero-actions">
-          <a class="button button-primary" href="#menu">Ver nuestro menú</a>
-          <a class="button button-ghost" href="#contacto">Encontranos</a>
+    <header class="encabezado-sitio">
+        <div class="contenedor encabezado-contenido">
+            <a class="marca" href="index.html" aria-label="Instituto Horizonte, ir al inicio">Instituto Horizonte</a>
+            <nav class="navegacion-principal" aria-label="Navegación principal">
+                <ul>
+                    <li><a class="enlace-actual" href="index.html" aria-current="page">Inicio</a></li>
+                    <li><a href="index.html#catalogo">Catálogo de cursos</a></li>
+                    <li><a href="contacto.html">Información de contacto</a></li>
+                    <li><a href="mantenimiento.html">Quién mantiene el sitio</a></li>
+                </ul>
+            </nav>
         </div>
-        <div class="hero-details">
-          <span>☕ Café recién molido</span>
-          <span>🥐 Pastelería artesanal</span>
-          <span>🌿 Ambiente tranquilo</span>
-        </div>
-      </div>
-      <div class="hero-visual">
-        <div class="hero-image-wrap">
-          <img src="assets/cafe.svg" alt="Ilustración de una taza de café sobre una mesa">
-          <div class="floating-card">
-            <strong>Tu pausa favorita</strong>
-            <span>Todos los días, desde las 8:00</span>
-          </div>
-        </div>
-      </div>
-    </section>
-  </header>
+    </header>
 
-  <main>
-    <section class="section menu-section" id="menu" aria-labelledby="menu-title">
-      <div class="container">
-        <div class="section-heading">
-          <div>
-            <p class="eyebrow">PARA CADA MOMENTO</p>
-            <h2 id="menu-title">Nuestro menú</h2>
-          </div>
-          <p>Clásicos de siempre y algunos favoritos de la casa, preparados con ingredientes simples y mucho cariño.</p>
+    <main>
+        <section class="presentacion" aria-labelledby="titulo-principal">
+            <div class="contenedor">
+                <p class="sobretitulo">Formación en idiomas</p>
+                <h1 id="titulo-principal">Cursos para aprender y perfeccionar idiomas</h1>
+                <p class="texto-presentacion">
+                    Explorá nuestra propuesta de cursos de Inglés y Francés, elegí una categoría
+                    y consultá el programa correspondiente a cada curso.
+                </p>
+                <a class="boton" href="#catalogo">Ver catálogo de cursos</a>
+            </div>
+        </section>
+
+        <section class="contenedor seccion-catalogo" id="catalogo" aria-labelledby="titulo-catalogo">
+            <div class="encabezado-seccion">
+                <p class="sobretitulo">Nuestra propuesta</p>
+                <h2 id="titulo-catalogo">Catálogo de cursos</h2>
+                <p>Seleccioná una de las dos categorías para mostrar sus cursos.</p>
+            </div>
+
+            <div class="selector-categoria" aria-labelledby="titulo-selector">
+                <h3 id="titulo-selector">Seleccionar categoría</h3>
+
+                <div class="opciones-categoria">
+                    <input type="radio" id="categoria-ingles" name="categoria" checked>
+                    <label for="categoria-ingles">Inglés</label>
+
+                    <input type="radio" id="categoria-frances" name="categoria">
+                    <label for="categoria-frances">Francés</label>
+
+                    <div class="grupos-cursos">
+                        <section class="grupo-cursos grupo-ingles" aria-labelledby="titulo-ingles">
+                            <div class="titulo-grupo">
+                                <h3 id="titulo-ingles">Cursos de Inglés</h3>
+                                <span>3 cursos disponibles</span>
+                            </div>
+
+                            <div class="grilla-cursos">
+                                <article class="tarjeta-curso">
+                                    <p class="nivel-curso">Nivel inicial</p>
+                                    <h3>Inglés Principiante</h3>
+                                    <p>Introducción al idioma para desarrollar vocabulario, expresiones cotidianas y estructuras gramaticales básicas.</p>
+                                    <a class="enlace-programa" href="programas/ingles-principiante.pdf">Consultar programa de Inglés Principiante (PDF)</a>
+                                </article>
+
+                                <article class="tarjeta-curso">
+                                    <p class="nivel-curso">Nivel avanzado</p>
+                                    <h3>Inglés Avanzado</h3>
+                                    <p>Perfeccionamiento de la comunicación oral y escrita, con énfasis en contextos académicos y profesionales.</p>
+                                    <a class="enlace-programa" href="programas/ingles-avanzado.pdf">Consultar programa de Inglés Avanzado (PDF)</a>
+                                </article>
+
+                                <article class="tarjeta-curso">
+                                    <p class="nivel-curso">Práctica oral</p>
+                                    <h3>Inglés Conversación</h3>
+                                    <p>Práctica guiada para ganar fluidez, ampliar vocabulario y desenvolverse con seguridad en conversaciones reales.</p>
+                                    <a class="enlace-programa" href="programas/ingles-conversacion.pdf">Consultar programa de Inglés Conversación (PDF)</a>
+                                </article>
+                            </div>
+                        </section>
+
+                        <section class="grupo-cursos grupo-frances" aria-labelledby="titulo-frances">
+                            <div class="titulo-grupo">
+                                <h3 id="titulo-frances">Cursos de Francés</h3>
+                                <span>3 cursos disponibles</span>
+                            </div>
+
+                            <div class="grilla-cursos">
+                                <article class="tarjeta-curso">
+                                    <p class="nivel-curso">Nivel inicial</p>
+                                    <h3>Francés Principiante</h3>
+                                    <p>Primer acercamiento al francés mediante vocabulario, pronunciación y estructuras frecuentes de uso cotidiano.</p>
+                                    <a class="enlace-programa" href="programas/frances-principiante.pdf">Consultar programa de Francés Principiante (PDF)</a>
+                                </article>
+
+                                <article class="tarjeta-curso">
+                                    <p class="nivel-curso">Nivel avanzado</p>
+                                    <h3>Francés Avanzado</h3>
+                                    <p>Profundización de las competencias lingüísticas para comprender y producir textos y conversaciones complejas.</p>
+                                    <a class="enlace-programa" href="programas/frances-avanzado.pdf">Consultar programa de Francés Avanzado (PDF)</a>
+                                </article>
+
+                                <article class="tarjeta-curso">
+                                    <p class="nivel-curso">Práctica oral</p>
+                                    <h3>Francés Conversación</h3>
+                                    <p>Entrenamiento oral orientado a mejorar la fluidez, la pronunciación y la confianza en situaciones comunicativas.</p>
+                                    <a class="enlace-programa" href="programas/frances-conversacion.pdf">Consultar programa de Francés Conversación (PDF)</a>
+                                </article>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="pie-sitio">
+        <div class="contenedor pie-contenido">
+            <p><strong>Instituto Horizonte</strong> · Sitio institucional de demostración.</p>
+            <nav aria-label="Navegación secundaria">
+                <a href="contacto.html">Contacto</a>
+                <a href="mantenimiento.html">Mantenimiento del sitio</a>
+            </nav>
         </div>
-
-        <div class="menu-filters" role="group" aria-label="Filtrar menú">
-          <button class="filter-button active" data-filter="todos">Todo</button>
-          <button class="filter-button" data-filter="cafes">Cafés</button>
-          <button class="filter-button" data-filter="bebidas">Bebidas</button>
-          <button class="filter-button" data-filter="comidas">Comidas</button>
-        </div>
-
-        <div class="menu-grid">
-          <article class="menu-card" data-category="cafes">
-            <div class="menu-icon">☕</div>
-            <div><h3>Espresso</h3><p>Corto, intenso y con una crema suave.</p><strong>$2.400</strong></div>
-          </article>
-          <article class="menu-card" data-category="cafes">
-            <div class="menu-icon">🥛</div>
-            <div><h3>Flat White</h3><p>Espresso doble con leche texturizada.</p><strong>$3.200</strong></div>
-          </article>
-          <article class="menu-card" data-category="cafes">
-            <div class="menu-icon">🍫</div>
-            <div><h3>Mocha Central</h3><p>Café, chocolate y leche cremosa.</p><strong>$3.500</strong></div>
-          </article>
-          <article class="menu-card" data-category="bebidas">
-            <div class="menu-icon">🧊</div>
-            <div><h3>Iced Latte</h3><p>Espresso, leche y hielo para una pausa fresca.</p><strong>$3.400</strong></div>
-          </article>
-          <article class="menu-card" data-category="bebidas">
-            <div class="menu-icon">🍊</div>
-            <div><h3>Limonada casera</h3><p>Limón recién exprimido, menta y hielo.</p><strong>$2.800</strong></div>
-          </article>
-          <article class="menu-card" data-category="bebidas">
-            <div class="menu-icon">🍵</div>
-            <div><h3>Té en hebras</h3><p>Selección de blends para tomar con calma.</p><strong>$2.500</strong></div>
-          </article>
-          <article class="menu-card" data-category="comidas">
-            <div class="menu-icon">🥐</div>
-            <div><h3>Croissant de manteca</h3><p>Hojaldre dorado, crujiente y recién horneado.</p><strong>$2.100</strong></div>
-          </article>
-          <article class="menu-card" data-category="comidas">
-            <div class="menu-icon">🥪</div>
-            <div><h3>Tostado Central</h3><p>Pan de campo, jamón, queso y mostaza suave.</p><strong>$4.900</strong></div>
-          </article>
-          <article class="menu-card" data-category="comidas">
-            <div class="menu-icon">🍰</div>
-            <div><h3>Cheesecake</h3><p>Suave y cremoso, con frutos rojos de estación.</p><strong>$4.200</strong></div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section about-section" id="nosotros" aria-labelledby="about-title">
-      <div class="container about-grid">
-        <div class="about-visual">
-          <div class="coffee-art" aria-hidden="true">
-            <span class="steam steam-1"></span><span class="steam steam-2"></span><span class="steam steam-3"></span>
-            <div class="cup"></div><div class="saucer"></div>
-          </div>
-        </div>
-        <div class="about-copy">
-          <p class="eyebrow">DESDE 2018</p>
-          <h2 id="about-title">Un rincón para bajar un cambio.</h2>
-          <p>Café Central nació con una idea sencilla: crear un lugar donde el café sea una excusa para compartir. Elegimos granos de pequeños productores, trabajamos con pastelería artesanal y cocinamos platos que nos recuerdan a casa.</p>
-          <p>Nos gusta conocer a quienes nos visitan, aprender sus pedidos de memoria y hacer que una pausa de veinte minutos se sienta como mucho más.</p>
-          <div class="about-stats">
-            <div><strong>7+</strong><span>años de café</span></div>
-            <div><strong>18</strong><span>opciones en carta</span></div>
-            <div><strong>100%</strong><span>ganas de recibirte</span></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section contact-section" id="contacto" aria-labelledby="contact-title">
-      <div class="container contact-grid">
-        <div class="contact-info">
-          <p class="eyebrow">¿NOS VISITÁS?</p>
-          <h2 id="contact-title">Hablemos.</h2>
-          <p>Si querés reservar una mesa, consultar la carta o simplemente saludarnos, escribinos. Te respondemos lo antes posible.</p>
-          <div class="contact-list">
-            <div><span class="contact-symbol">⌖</span><div><strong>Dirección</strong><span>Av. Central 1234, La Plata</span></div></div>
-            <div><span class="contact-symbol">☎</span><div><strong>Teléfono</strong><span>+54 221 555-0142</span></div></div>
-            <div><span class="contact-symbol">✉</span><div><strong>Email</strong><span>hola@cafecentral.com</span></div></div>
-            <div><span class="contact-symbol">◷</span><div><strong>Horarios</strong><span>Lun–Vie 08:00–20:00 · Sáb–Dom 09:00–21:00</span></div></div>
-          </div>
-        </div>
-
-        <form class="contact-form" id="contact-form" novalidate>
-          <div class="form-row">
-            <label for="nombre">Nombre</label>
-            <input id="nombre" name="nombre" type="text" placeholder="Tu nombre" required>
-          </div>
-          <div class="form-row">
-            <label for="email">Correo electrónico</label>
-            <input id="email" name="email" type="email" placeholder="tu@email.com" required>
-          </div>
-          <div class="form-row">
-            <label for="mensaje">Mensaje</label>
-            <textarea id="mensaje" name="mensaje" rows="5" placeholder="¿En qué podemos ayudarte?" required></textarea>
-          </div>
-          <button class="button button-primary submit-button" type="submit">Enviar mensaje</button>
-          <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
-        </form>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container footer-content">
-      <a class="brand footer-brand" href="#inicio"><span class="brand-mark">CC</span><span>Café Central</span></a>
-      <p>© 2026 Café Central. Café, comida y buenos momentos.</p>
-      <a href="#inicio" class="back-top" aria-label="Volver al inicio">↑</a>
-    </div>
-  </footer>
-
-  <script src="js/script.js"></script>
+    </footer>
 </body>
 </html>

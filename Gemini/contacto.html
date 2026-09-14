@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | Instituto de Idiomas</title>
+    <link rel="stylesheet" href="estilosIA.css">
+</head>
+<body>
+    <header class="encabezado">
+        <div class="contenedor header-contenido">
+            <a href="index.html" class="logo">InstitutoIdiomas</a>
+            <nav class="navegacion-principal" aria-label="Navegación principal">
+                <ul>
+                    <li><a href="index.html">Inicio / Cursos</a></li>
+                    <li><a href="contacto.html" class="activo" aria-current="page">Contacto</a></li>
+                    <li><a href="mantenimiento.html">Mantenimiento</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="contenedor pagina-reducida">
+        <section class="seccion-formulario">
+            <h1>Contacto</h1>
+            <p>¿Tenés dudas sobre nuestros cursos? Completá el formulario y nos contactaremos a la brevedad.</p>
+
+            <form action="/enviar-mensaje" method="POST" class="formulario-contacto">
+                <div class="grupo-form">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+
+                <div class="grupo-form">
+                    <label for="apellido">Apellido</label>
+                    <input type="text" id="apellido" name="apellido" required>
+                </div>
+
+                <div class="grupo-form">
+                    <label for="email">Correo electrónico</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="grupo-form">
+                    <label for="asunto">Asunto</label>
+                    <input type="text" id="asunto" name="asunto" required>
+                </div>
+
+                <div class="grupo-form">
+                    <label for="mensaje">Mensaje</label>
+                    <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+                </div>
+
+                <button type="submit" class="btn-enviar">Enviar Mensaje</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="pie-pagina">
+        <div class="contenedor">
+            <p>&copy; 2026 Instituto de Idiomas. Sitio 100% estático, sin JavaScript.</p>
+        </div>
+    </footer>
+</body>
+</html>
